@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Adamina&family=Tangerine:wght@400;700&family=Gentium+Basic&family=Josefin+Sans&family=Italianno&family=Tangerine:wght@400;700&family=Playfair+Display=Gilda+Display&display=swap');
+</style>
+
+body{
+    margin: 0;
+    transition: all 300ms ease;
+}
+
+*{
+    font-family: 'Josefin Sans', 'Playfair Display', 'Gentium Basic', sans-serif;
+    box-sizing: border-box;
+}
+
+.hamburger{
+    color:grey;
+}
+
+.fixed-top {
+top:
+}
+
+nav{
+    background-color: #fff;
+}
+
+nav a{
+    color: grey;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    margin: 0 4px;
+    position: relative;
+    cursor: pointer;
+}
+nav a:after{
+    content: "";
+    position: absolute;
+    background-color: lightslategray;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -3px;
+    transition: 400ms;
+}
+
+nav a:hover {
+    color:#383838;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+.navbar-logo:hover::after{
+    width: 0;
+}
+
+#and{
+    font-family: 'Playfair Display', serif;
+}
+
+footer{
+    background-color: #fff;
+    margin: 0;
+    padding: 0; !important
+}
+
+footer a {
+    color: grey;
+    font-family: 'Playfair Display';
+
+}
+
+footer a:hover {
+
+    color: #383838;
+}
+
+.footer-brand {
+    color: grey;
+    font-family: 'Playfair Display';
+}
+
+#footer-margin {
+    padding:0; !important
+}
+
+.placeholder-text{
+    margin-top: 20px;
+    font-family: 'Gentium Basic', serif;
+    color: #236192;
+    text-align: center;
+}
+
+
+
+/* Footer from Bootstrap */
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+
+
+
+
+/* test */
+
+.test-font {
+    /* font-family: 'Adamina', serif; */
+    /* font-family: 'Gentium Basic', serif; */
+    /* /* font-family: 'Josefin Sans', sans-serif; */
+    font-family: 'Playfair Display', serif;  
+    /* font-family: 'Gilda Display', serif; */
+    margin: 0;
+    color: black;
+
+}
+

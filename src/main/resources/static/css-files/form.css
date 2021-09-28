@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Italianno&family=Tangerine:wght@400;700&family=Tangerine:wght@400;700&display=swap');
+
+/* General Styling */
+
+*{
+    /* font-family:'Playfair Display', 'Gentium Basic', sans-serif; */
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h1 {
+    font-family: 'Italianno';
+    font-size: 80px;
+}
+
+/* Left Image */
+
+.form-left{
+    height: 100%;
+}
+
+.form-left img{
+    width: 100%;
+    height: 100%;
+    /*box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);*/
+}
+
+.form-container{
+    height: 80%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-radius: 8px; */
+    background-color: #fff;
+    /* border: solid 4px #fff; */
+    /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
+    color: #000;
+    /*margin: 250px 80px 0 80px;*/
+
+}
+
+/* General Form & Input Styling */
+.addProductForm{
+    width: 100%;
+    position: relative;
+    top: 86px;
+
+}
+
+label {
+    font-family: 'Playfair Display';
+    width: 80px;
+    margin-right: 10px;
+    font-size: 14px;
+    text-align: left;
+    padding-left: 20px;
+    /* font-size: 20px; */
+}
+
+
+
+.text-boxes{
+    width: 100%;
+}
+
+.text-input {
+    padding-left: 12px;
+}
+
+.form2 {
+    display: flex;
+    width: 90%;
+    margin: 0;
+    width: 90%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.form2 label {
+    text-align: right;
+    min-width: 150px;
+    margin-right: 30px;
+}
+
+.form-group{
+    margin: 10px 0;
+}
+
+.form-right{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    border-left: none;
+    /* background-color: #F3D8C7; */
+    /* background-image: linear-gradient(to bottom right, #CD9341, #CD9300, #CC9000); */
+}
+
+.form-right h1{
+    text-align: center;
+    color: #333;
+    margin: 25px;
+    font-size: 50px;
+}
+
+.form-right input, textarea {
+    padding: 2px 12px;
+    transition: 300ms ease;
+
+}
+
+
+#reset-button{
+    padding: 7px;
+    margin: 0 15px;
+}
+
+.submit-buttons{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-btn {
+    background-color: #545454;
+    color:white;
+    padding: 7px;
+    width: 20%;
+    transition: all 300ms ease-in; 
+    font-family: 'Playfair Display';
+}
+
+.form-btn:hover {
+    background-color: black;
+    border-color:black;
+    color: white;
+}
+
+.form2 textarea {
+    width: 100%;
+    height: 200px;
+    padding: 2px 12px;
+}
+.submit-buttons{
+    margin-bottom: 20px;
+}
+.form-btn{
+    width: 200px;
+}
+.labelsCheckbox label{
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+/* Categories Dropdown Menu */
+
+
+.form-control {
+    font-family: 'Playfair Display';
+    text-align: left;
+    font-size: 16px;
+    padding: 6px 12px 6px 8px;
+}
+
+#product-category option {
+    padding-left: 10px;
+}
+
+.dropdown-button {
+    width: 29%;
+}
+
+/* MOBILE RESONSIVENESS */
+
+@media (max-width: 800px) {
+    body{
+        height: 100%;
+        width: fit-content;
+        overflow-x: visible;
+    }
+
+    .form-container{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;     
+
+    }
+    .form-left, .form-right{
+        width: 100%;
+        /* flex-wrap: wrap; */
+        border-radius: 0;
+    }
+
+    .form-left {
+        height: 270px;
+    }
+
+    .form-left img{
+        /* border-radius: 0;*/
+        background: url(https://images.unsplash.com/photo-1588467850140-763664599b53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80) no-repeat;
+        /* transform: rotateY(180deg);
+        background-size: cover;
+        height: 270px; */
+        object-fit: cover;
+    }
+
+    .addProductForm {
+    top: 20px;
+    }
+}
+
+/* Removed Styling */
+
+/* .formpage-jumbo {
+    width: 90%;
+    background-color:#EFE5DC;
+    padding: 110px;
+} */
+
+/* .labelsCheckbox .w-150{
+    padding-right: 0;
+    margin-right: 0;
+    width: 200px;
+} */
+
+
+
+/* .labelsCheckbox .w-150{ 
+    margin: 5px 0;
+    width: 360px;
+    text-align: left;
+} */
+/* .form2 input[type="text"] {
+    width: 100%;
+} */
+
+/* .form2 label{
+    width: 80px;
+    margin-right: 10px;
+    font-size: 14px;
+    text-align: left;
+    padding-left: 20px;
+} */
+
+/* .text-boxes{
+    width: 705px;
+} */
+
+/* input[type="checkbox"]{
+    filter: invert(15%) hue-rotate(15deg) brightness(1.9);
+    transition: 200ms ease;
+  } */
+
+
+
+/* .labelsCheckbox label {
+    text-align: left;
+} */
+
+
+/* .form2 textarea {
+    width: 705px;
+    height: 350px;
+    
+} */
