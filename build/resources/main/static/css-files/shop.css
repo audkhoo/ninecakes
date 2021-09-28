@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Italianno&family=Tangerine:wght@400;700&family=Tangerine:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Playfair Display';
+}
+ 
+ /* Jumbotron */
+
+ h1 {
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+
+H3 {
+    font-family: 'Italianno', 'Playfair Display', 'Times New Roman', Times, serif;
+    font-size: 60px;
+    margin-bottom: 50px;
+
+}
+
+ .jumbotron-title {
+    position: relative;
+    display: block;
+    text-align: center;
+    line-height: 470px;
+    z-index: 20;
+    color: black;
+    padding: 20px 0;
+ }
+
+ .jumbotron-size {
+     height: 400px;
+     top: 70px;
+ }
+
+
+ .jumbotron-img {
+    background: url(../images/banner2-400.jpg) no-repeat;
+    background-size: cover;
+    height: 400px;
+ }
+
+
+/* Side Filter Nav */
+
+.stickytop-margin {
+    position: sticky;
+    top: 90px;
+}
+
+.sidebar ul li a{
+    padding-left: 0;
+    color:black;
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+}
+
+.sidebar ul li a:hover{
+    color:grey;
+    transition: all 300ms ease-in;
+}
+
+button {
+    border: none;
+    background-color: white;
+    color: #cd9442;
+}
+
+.sidebar-mobile {
+    display: none;
+}
+
+/* Search in Nav */
+
+
+button {
+    padding: 0;
+}
+
+button i {
+    color:black;
+    padding: 0;
+}
+
+.search-input {
+    border: none;
+    border-bottom: 1px solid grey;
+    color:darkgrey;
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+    width: 40%;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: white;
+    padding: 5px 0px 7px 0px;
+    resize: none;
+}
+
+.search-input:focus {
+    background-color: #fff;
+    outline: none;
+}
+
+::placeholder { 
+    color: grey;
+    opacity: 0.7;
+}
+
+ /* Shop Card */
+
+ .card h5 {
+     text-transform: capitalize;
+     font-size: 18px;
+ }
+ .card-hover:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    outline: none;
+}
+
+.card-hover a:link, a:visited, a:active{
+    text-decoration: none;
+    
+}
+
+.card-text-font {
+    color: black;
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+}
+
+
+.card-font-size-price {
+    font-size: 16px;
+}
+
+#mobile-filter {
+    display: none;
+}
+
+/* Modal */
+
+    .text-boxes {
+        border-color: darkgrey;
+        border-radius: 2px;
+    }
+
+    #modalName {
+        font-family: 'Italianno';
+        font-size: 50px;
+    }
+    .product-description {
+        text-align: center;
+    }
+    .product-description p {
+        text-align: justify;
+        text-align-last:center ;
+        margin: 0 20px 20px 20px;
+    }
+
+    #modalName {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    
+    #modalPrice {
+        font-size: 18px;
+        margin: 5px 0 15px 0;
+        font-family: 'Playfair Display';
+    }
+
+    .dropdown label {
+        padding: 5px 0;
+    }
+
+    .dropdown-menu { 
+        margin: 0;
+    }
+    
+    .dropdown select{
+        width: 100%;
+    }
+
+    .dropdown input {
+        text-align: center;
+    }
+
+
+    #message {
+        border: 1px solid darkgrey;
+    }
+
+    .message-section ::placeholder {
+        padding-left: 5px;
+    }
+
+    #message-label {
+        padding: 5px 0;
+    }
+
+    #dp-input option{
+        text-align: center;
+    }
+
+    #addToCart{
+        border: 1px solid white;
+        background-color: black;
+        font-size: 18px;
+        font-family: 'Playfair Display';
+        color: white;
+        width: 70%;
+        margin-top:10px;
+        margin-bottom: 20px;
+        border-radius: 2px; 
+        } 
+        
+        .message-section {
+            text-align: center;
+        }
+
+
+        #message{   
+            width:60%;
+            height:100px;
+
+        }
+
+    .modal-header{
+        border-bottom-color: lightgrey;
+        }
+
+
+
+    @media only screen and (max-width:767px){ 
+    #content-popup{
+        text-align: center;
+    }
+    #content-popup h2{
+        margin-top: 10px;
+    }
+    #contactUs {
+      justify-content: space-around ;
+    
+    }
+    .modal-dialog{
+        width:300px;
+        /* width:59%; */       
+    }
+
+    #message{   
+        margin: 0px 0px 0px 70px;
+        border: 1px solid grey;
+        top:-10px;
+
+        
+    }
+
+    #addToCart{
+        
+        border: 1px solid white;
+        background-color: black;
+        font-size: small;
+        color: white;
+        width:90%;
+        margin:10px;
+        /* position:relative; */
+        bottom:30px;   
+        padding: 10px 32px; 
+        border-radius: 2px;
+        font-size: 16px;
+    }
+    
+    #modalName {
+        font-size: 35px;
+    }
+}
+    
+#img-popup{
+
+        width:100%;
+        height:100%;
+    } 
+#content-popup{
+        text-wrap:wrap;
+}
+
+.dropdown {
+    text-align: center;
+}
+
+.dropdown .btn{
+
+    width:  100%;
+    height: 30px;
+    padding:0;
+    margin:5px auto;
+
+}
+#dropdownMenuButton1, #dropdownMenuButton2,#dropdownMenuButton3{
+
+    background-color: white;
+    border: 1px solid grey;
+    color:black;
+}
+.fa-caret-down {
+
+
+    font-size:21px;
+    float: right;
+    background-color:rgba(1, 1, 1, 0);
+    color: grey;
+    position: relative;
+        top: -1px; 
+    right: 2px;
+    
+    
+    }
+.dropdown-toggle{
+
+    float: right;
+}
+
+#dp-quantity{
+    padding-right:10px;
+}
+
+#dp-size{
+    padding-right:40px;
+}
+
+#dp-candles{
+    padding-right:10px;
+}
+
+#message{   
+    width:100%;
+    height:100px;
+    margin: auto;
+    /* margin: 15px 0px 15px 70px; */
+    padding-right: 2px;
+    /* position:relative; */
+    /* bottom:40px; */
+    left:5px;
+    border: 1px solid darkgrey;
+    border-radius: 2px;
+
+}
+#message:focus{
+outline:none;
+}
+
+    
+
+@media screen and (max-width: 800px) {
+
+    
+    /* Jumbotron */
+    
+    .jumbotron-size {
+        height: 270px;
+        top: 70px;
+    }
+    
+    .jumbotron-img {
+        background: url(../images/banner2-400.jpg) no-repeat;
+        background-size: cover;
+        height: 270px;
+    }
+    
+    /* Sidebar -> Top Filter */
+
+    .sidebar-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10px;
+        /* position: fixed;
+        z-index: 1900;
+        background-color: white;
+        width: 100%; */
+        position: sticky;
+        top: 80px;
+        z-index: 1000;
+        background-color:#fff;
+    }
+
+    .mobile-filter-text {
+        font-size: 15px;
+    }
+
+    .sidebar ul li a{
+        color:black;
+        font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+        text-align: center;
+        padding:0 5px;
+    }
+
+    .sidebar-desktop {
+        display: none;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+
+    .search-mobile {
+        width: 1px;
+    }
+
+    .search-input {
+        border: none;
+        border-bottom: 1px solid black;
+        color:black;
+        font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+        width: 55%;
+        box-sizing: border-box;
+        font-size: 13px;
+        background-color: white;
+        resize: none;
+    }
+
+    ::placeholder { 
+        color: grey;
+        opacity: 0.7;
+        text-align: center;
+    }
+    /* Product Card-Grid */
+    
+    .card-text-font {
+        font-size: 16px;
+    }
+}
+    /* Modal */
+
+@media (max-width:576px) {
+        
+     .modal-dialog {
+        max-width:500px;
+        margin:1.75rem auto
+    }
+        
+    .modal-dialog-scrollable {
+        max-height:calc(100% - 3.5rem)
+    }
+            
+    .modal-dialog-scrollable .modal-content {
+        max-height:calc(100vh - 3.5rem)
+    }
+        
+    .modal-dialog-centered {
+        min-height:calc(100% - 3.5rem)
+    }
+            
+    .modal-dialog-centered::before {
+        height:calc(100vh - 3.5rem);
+        height:-webkit-min-content;
+        height:-moz-min-content;
+        height:min-content
+    }
+         
+    .modal-sm {
+        max-width:300px
+    }
+        
+}
+
+@media (min-width:1200px){
+    .container,.container-lg,.container-md,.container-sm,.container-xl{
+        max-width:75%;
+    }
+}
+
