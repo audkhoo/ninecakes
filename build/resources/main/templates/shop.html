@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
+    <link rel="shortcut icon" type="image" href="../images/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css-files/bakes-style.css">
@@ -75,16 +76,16 @@
                     -->
                     <ul class="nav sidebar-mobile">
                         <li class="nav-item">
-                            <a class="nav-link active mobile-filter-text" href="#">All</a>
+                            <a class="nav-link active mobile-filter-text filerLink" data-filter="All" href="#">All</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" >Classic Cakes</a>
+                            <a class="nav-link filerLink" data-filter="classic" href="#">Classic Cakes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" >Wedding Cakes</a>
+                            <a class="nav-link filerLink" data-filter="wedding" href="#">Wedding Cakes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" >Cupcakes</a>
+                            <a class="nav-link filerLink" data-filter="cupcakes" href="#">Cupcakes</a>
                         </li>
                         <!-- 
                         <li>
@@ -112,7 +113,8 @@
                 <div class="row mx-auto" id="product-wrapper">
             <!--        <div class="col-6 col-md-4">
                         <div class="card card-hover border-0 px-2 mb-3">
-                            <a href="#" data-toggle="modal" data-target="#cake-modal">
+                            <a href="cake-modal" data-bs-toggle="modal">
+                            <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                                 <img class="card-img-top" src="https://images.unsplash.com/photo-1622621746668-59fb299bc4d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=846&q=80" alt="rainbow cake">
                                 <div class="card-body">
                                     <h5 class="card-title text-center card-text-font card-design">Strawberry Cheesecake</h5>
@@ -252,106 +254,109 @@
 
   
   <!-- Modal -->
-  <div id="cake-modal" class="modal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-           <div class="row">
-              <div class="col-12 col-md-6 ">
-                 <img  id="img-popup" src="https://images.unsplash.com/photo-1622621746668-59fb299bc4d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=846&q=80"  alt="rainbow cake">                    
-              </div>
-              <div class="col-12 col-md-6 " id="content-popup">
-                <div class="modal-content-right">
-                  <div class="product-description">
-                     <h2 id="modalName">Strawberry Shortcake</h2>
-                     <h3 id="modalPrice">$30</h3>
-                     <p id="modalDescription">Classic Japanese-inspired strawberry shortcake, with fresh and sweet strawberries on top of a three-layered sponge, layered with strawberries in between.</p>
-                  </div>
-                 <!-- Quantity Dropdown -->
-                  <div class="dropdown">
-                      <label id="dp-quantity" for="product-quantity">Quantity:</label>
-                      <input type="number"
-                             class="form-control text-boxes text-input"
-                             id="product-quantity"  min="0.00"
-                             max="20.00" step="1.00" required>
+            <div id="cake-modal" class="modal fade" aria-hidden="true" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div> <!--Modal Header End-->
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-6 ">
+                                    <img  id="img-popup" src="https://images.unsplash.com/photo-1622621746668-59fb299bc4d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=846&q=80"  alt="rainbow cake">
+                                </div> <!--End of 1st Column-->
+                                <div class="col-12 col-md-6 " id="content-popup">
+                                    <div class="modal-content-right">
+                                        <div class="product-description">
+                                            <h2 id="modalName">Strawberry Shortcake</h2>
+                                            <h3 id="modalPrice">$30</h3>
+                                            <p id="modalDescription">Classic Japanese-inspired strawberry shortcake, with fresh and sweet strawberries on top of a three-layered sponge, layered with strawberries in between.</p>
+                                        </div>
 
-                  </div>
-<!-- 
-                    <div class=“form-group form2”>
-                        <label for=“product-category”>Quantity:</label>
-                        <select class=“form-control” id=“product-category”>
-                          <option>Select</option>
-                          <option>Classic Cakes</option>
-                          <option>Cupcakes</option>
-                          <option>Wedding Cakes</option>
-                        </select>
-                      </div> -->
+                                        <!-- Quantity Dropdown -->
+                                        <form class="text-center">
+                                        <div class="dropdown">
+                                            <label id="dp-quantity" for="product-quantity">Quantity:</label>
+                                            <input type="number"
+                                                   class="form-control text-boxes text-input"
+                                                   id="product-quantity"  min="1.00"
+                                                   max="20.00" step="1.00" required>
+                                        </div>
 
-                 <!-- </div> -->
+                                        <!-- Candles dropdown -->
+                                        <div class="dropdown">
+                                            <label id="dp-candles" for="product-candle">Candles:</label>
+                                            <input type="number" class="form-control text-boxes text-input" id="product-candle"  min="0.00" max="120.00" step="1.00" required>
+                                        </div>
 
-                <!-- Size Dropdown -->
+                                        <!-- Message Section-->
+                                        <div class="message-section">
+                                            <label for="message" id="message-label">Message:</label>
+                                            <p><textarea name="message" id="message"placeholder="Type your message here" col="30" row="3"></textarea></p>
+                                        </div>
 
-                 <!-- <div class="dropdown">
-                  <label id="dp-size" for="dropdownMenuButton2">size:</label> 
-                  <button class="btn btn-secondary btn-sm btn-light" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  15cm
-                  <i class="fas fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">15cm</a>
-                  <a class="dropdown-item" href="#">18cm</a>
-                  <a class="dropdown-item" href="#">20cm</a>
-                  <a class="dropdown-item" href="#">24cm</a>
-                   </div>
-               </div> -->
+                                        <!-- Button -->
+                                            <button type="button" value="Add to cart" class="btn btn-outline-secondary home-btn" id="addToCart" data-target="#addToCartModal" data-toggle="modal" data-dismiss="modal">Add to cart</button>
+                                        </form>
+                                        <!--                                        <button class="btn btn-light cart-button" id="addToCart" data-target="#addToCartModal" data-toggle="modal" data-dismiss="modal">Add to cart</button>-->
+                                    </div> <!--Modal Content Right end-->
+                                </div><!--End of 2nd Column-->
+                            </div><!--End of Row-->
+                        </div><!--Modal Body End-->
+                    </div> <!--Modal Content End-->
+                </div> <!--Modal dialogue End-->
+            </div><!--First Modal End-->
 
-              <!-- Candles dropdown -->
-
-               <div class="dropdown">
-                <label id="dp-candles" for="product-candle">Candles:</label>
-                    <input type="number"
-                           class="form-control text-boxes text-input" id="product-candle"  min="0.00" max="120.00" step="1.00" required>
-                </div>
-                <!-- <button class="btn btn-secondary btn-sm btn-light" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                1
-                <i class="fas fa-caret-down"></i>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">1</a>
-                <a class="dropdown-item" href="#">2</a>
-                <a class="dropdown-item" href="#">3</a>
-                <a class="dropdown-item" href="#">4</a>
-                <a class="dropdown-item" href="#">5</a>
-                <a class="dropdown-item" href="#">6</a>
-                <a class="dropdown-item" href="#">7</a>
-                <a class="dropdown-item" href="#">8</a>
-                <a class="dropdown-item" href="#">9</a>
-                <a class="dropdown-item" href="#">10</a> -->
-              <!-- </div> -->
-                  <!-- <input type="text" id="message" placeholder="Type your message here" /> -->
-                <div class="message-section">
-                <label for="message" id="message-label">Message:</label>
-                  <p><textarea name="message" id="message"placeholder="Type your message here" col="30" row="3"></textarea></p>
-                  <button id="addToCart" type="button" class="btn btn-light cart-button">Add to cart</button>               
-                </div>          
-                </div>
-                </div>
-            </div>         
-        </div>
-      </div>
-    </div>
-  </div>
+            <!-- Second Add To Cart Modal -->
+            <div class="modal fade" id="addToCartModal" aria-hidden="true" aria-labelledby="addToCartModalLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addToCartModalLabel">Added to Cart</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                        </div> <!--End Modal Header-->
+                        <div class="modal-body">
+                            You're a step closer to your dream cake!
+                        </div> <!--End Modal Body-->
+                    </div><!--End Modal Content-->
+                </div><!--End Modal Dialog-->
+            </div>
+            <!--End Modal-->
 
 
         </div>
     </div>
-       
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="fas fa-arrow-up back-to-top"></i>
+    </button>
+    <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
       <!-- Footer Section -->
       <div th:insert="fragments/footer.html :: footer"></div>
       

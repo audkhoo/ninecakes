@@ -26,3 +26,30 @@ for(let i= 0 ; i<filterLinks.length ; i++){
        })
     });
 }
+
+//search filter
+
+const search = document.querySelector(".search-input");
+search.addEventListener("keyup", (e)=>{
+  const allProducts = document.querySelectorAll(".cake-product");
+  e.preventDefault();
+
+  const searchValue = search.value.toLowerCase().trim();
+  const initialL =  searchValue.charAt(0).toUpperCase();
+  const keyword = initialL.concat(searchValue.slice(1));
+
+
+  for(i = 0; i< allProducts.length;i++)
+  {  console.log(allProducts[i].classList);
+    if(allProducts[i].classList.contains(searchValue)||
+       allProducts[i].classList.contains(keyword)
+      ){
+      allProducts[i].style.display = "block";
+    }else if (searchValue == ""){
+      allProducts[i].style.display = "block";
+    }else{
+      allProducts[i].style.display = "none";
+    }
+  }
+
+});

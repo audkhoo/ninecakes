@@ -36,12 +36,12 @@
 
 
             <div sec:authorize="isAnonymous()">
-                <li class="nav-item"><a class="nav-link" th:href="@{login}"> Log in</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{login}"> Log In</a></li>
             </div>
 
             <div sec:authorize="isAuthenticated()">
                 <form id="logOut" th:action="@{/logout}" method="post">
-                    <li class="nav-item"><a class="nav-link" onclick="document.getElementById('logOut').submit();"> Log out</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="document.getElementById('logOut').submit();"> Log Out</a></li>
                 </form>
             </div>
 

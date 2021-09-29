@@ -16,7 +16,7 @@ class ProductManager {
         var productController = this;
 
 
-        console.log(name, imageObject);
+
         const formData = new FormData();
 
         /*(key,value) pair
@@ -30,17 +30,17 @@ class ProductManager {
         formData.append('price', price);
         formData.append('imageFile',imageObject);
 
-       console.log(...formData);
 
 
-//        fetch('http://localhost:8080/item/add', {
+
+          //fetch('http://localhost:8080/item/add', {
           fetch('https://ninecakes.herokuapp.com/item/add', {
              method: 'POST',
              body: formData
              })
              .then(response => response.json())
              .then(data => {
-                 console.log('Success:', data);
+
                  alert("Successfully added to Product")
              })
              .catch((error) => {
@@ -69,7 +69,7 @@ displayItem()
         productController._products = [];
 
         //fetch data from database using the REST API endpoint from Spring Boot
-//        fetch('http://127.0.0.1:8080/item/all')
+          //fetch('http://127.0.0.1:8080/item/all')
           fetch('https://ninecakes.herokuapp.com/item/all')
             .then((resp) => resp.json())
             .then(function(data) {
@@ -90,7 +90,7 @@ displayItem()
               });
 
               productController.renderProductPage();
-              console.log("Render method");
+
 
             })
             .catch(function(error) {
@@ -100,7 +100,6 @@ displayItem()
 
 
      renderProductPage() {
-       console.log("!!!");
         const productHTMLList = [];
         // to loop through array, replaces for loop
         this._products.forEach((element, index) => {
@@ -108,14 +107,13 @@ displayItem()
             //Append the cards created to the #row id
             const productHTML = createHTMLCard(index, element);
             productHTMLList.push(productHTML);
-             console.log(productHTML);
-            console.log(productHTMLList);
+
         }
         );
 
 
         const pHTML = productHTMLList.join("\n");
-        console.log(pHTML);
+
 
         document.querySelector("#product-wrapper").innerHTML = pHTML;
    
@@ -147,8 +145,8 @@ displayItem()
 //}
 
 const createHTMLCard = (index, product) => `
-<div class="col-6 col-md-4 cake-product ${product.category}">
-    <div id = "${index}" class="card card-hover border-0 px-2 mb-3 ">
+<div class="col-6 col-md-4 cake-product ${product.category} ${product.name}">
+    <div id = "${index}" class="card card-hover border-0 p-2 mb-3 ">
         <a href="#" data-toggle="modal" data-target="#cake-modal">
             <img class="card-img-top" src="${product.imageUrl}"
             alt="cake">

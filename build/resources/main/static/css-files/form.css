@@ -63,7 +63,7 @@ label {
     font-family: 'Playfair Display';
     width: 80px;
     margin-right: 10px;
-    font-size: 14px;
+    font-size: 16px;
     text-align: left;
     padding-left: 20px;
     /* font-size: 20px; */
@@ -83,7 +83,6 @@ label {
     display: flex;
     width: 90%;
     margin: 0;
-    width: 90%;
     justify-content: flex-start;
     align-items: center;
 }
@@ -107,8 +106,6 @@ label {
     justify-content: center;
     align-items: center;
     border-left: none;
-    /* background-color: #F3D8C7; */
-    /* background-image: linear-gradient(to bottom right, #CD9341, #CD9300, #CC9000); */
 }
 
 .form-right h1{
@@ -143,6 +140,7 @@ label {
     width: 20%;
     transition: all 300ms ease-in; 
     font-family: 'Playfair Display';
+    border-radius: 20px;
 }
 
 .form-btn:hover {
@@ -156,9 +154,10 @@ label {
     height: 200px;
     padding: 2px 12px;
 }
-.submit-buttons{
+/* .submit-buttons{
     margin-bottom: 20px;
 }
+*/
 .form-btn{
     width: 200px;
 }
@@ -185,7 +184,7 @@ label {
     width: 29%;
 }
 
-/* MOBILE RESONSIVENESS */
+/* MOBILE RESPONSIVENESS */
 
 @media (max-width: 800px) {
     body{
@@ -221,6 +220,24 @@ label {
 
     .addProductForm {
     top: 20px;
+    }
+
+    .submit-buttons {
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .form-btn{
+        width: 30%;
+    }
+
+    .form2{
+        width: 97%;
+
+    }
+
+    .form2 label{
+        margin-right: 10px;
+        padding-left: 0;
     }
 }
 

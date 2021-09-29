@@ -31,12 +31,13 @@ textArea.addEventListener("keydown", () =>{
 function validateForm(){
     checkDescription();
     checkCategories();
-    if (validCategory && validDescription){
+    checkImage();
+    if (validCategory && validDescription && checkImage){
 
-        const confirmUpload = confirm("are you okay with uploading your final product?");
+        const confirmUpload = confirm("Are you okay with uploading your final product?");
         if (confirmUpload == true){
             uploadProduct();
-            alert("success!")
+            alert("Success!")
             //refresh page
              window.location.reload();
         }
@@ -68,6 +69,18 @@ function checkDescription(){
     }
 }
 
+function checkImage() {
+    var formData = new FormData();
+    var file = document.getElementById("product-image").files[0];
+    formData.append("Filedata", file);
+    var t = file.type.split('/').pop().toLowerCase();
+    if (t != "jpeg" && t != "jpg" && t != "png" && t != "bmp" && t != "gif") {
+        alert('Please select a valid image file');
+        document.getElementById("img").value = '';
+        return false;
+    }
+    return true;
+}
 function uploadProduct() {
 
     name = document.getElementById("product-name").value;
