@@ -11,65 +11,57 @@ let validCategory = false;
 let validDescription = false;
 var storeImage = ""
 
-
-
-
-
-
-//REMOVE POP-UP ERROR MESSAGE
+//Remove Pop-Up Error Message
 productCategory.addEventListener("click", () => {
     productCategory.setCustomValidity("");
     productCategory.reportValidity();
 })
 
-textArea.addEventListener("keydown", () =>{
+textArea.addEventListener("keydown", () => {
     textArea.setCustomValidity("");
     textArea.reportValidity();
 })
 
-// VALIDATE FORM
-function validateForm(){
+// Validate Form
+function validateForm() {
     checkDescription();
     checkCategories();
-    if (validCategory && validDescription){
-
-        const confirmUpload = confirm("are you okay with uploading your final product?");
-        if (confirmUpload == true){
+    if (validCategory && validDescription) {
+        const confirmUpload = confirm("Are you okay with uploading your final product?");
+        if (confirmUpload == true) {
             uploadProduct();
             alert("success!")
             //refresh page
-             window.location.reload();
+            window.location.reload();
         }
     }
 }
 
-function checkCategories(){
+function checkCategories() {
     category = document.getElementById("product-category").value;
     var selectedCategory = category.value;
-    if (selectedCategory == "select"){
+    if (selectedCategory == "select") {
         productCategory.setCustomValidity("please select one category.");
         productCategory.reportValidity();
         validCategory = false;
         return;
-    } else{
+    } else {
         validCategory = true;
         return selectedCategory;
     }
 }
 
-
-function checkDescription(){
+function checkDescription() {
     description = document.getElementById("product-description");
-    if (description.value.length < 1){
+    if (description.value.length < 1) {
         description.setCustomValidity("please type at least 1 character.");
         description.reportValidity();
-    } else{
+    } else {
         validDescription = true;
     }
 }
 
 function uploadProduct() {
-
     name = document.getElementById("product-name").value;
     price = document.getElementById("product-price").value;
     description = document.getElementById("product-description").value;
@@ -81,18 +73,16 @@ function uploadProduct() {
 
     productManager.addProduct(name, description,
     imageUrl, category, price,storeImage);
-
-
 }
 
 uploadBtn.addEventListener("click", validateForm);
 
- // select file input
-    const input = document.querySelector('#product-image');
+// select file input
+const input = document.querySelector('#product-image');
 
-    // add event listener
-    input.addEventListener('change', () => {
-        storeImage = input.files[0];
-    });
+// add event listener
+input.addEventListener('change', () => {
+    storeImage = input.files[0];
+});
 
 

@@ -12,112 +12,93 @@
     <link rel="icon" href="favicon.png"  type="image">
 </head>
 <body>
-      <!-- NAVBAR -->
-  <div th:insert="fragments/navbar.html :: navbar"></div>
-    
-    <h1 class="text-gradient">Who We Are</h1>
-    <!-- <div class="heading-line"></div> -->
-   
-    <div class="form-wrapper">
-        
-        <section id="form-left">
-        <img src="https://images.unsplash.com/photo-1596529267076-07866e3655cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" id="top-image"alt="">
+    <!-- Navbar Template -->
+    <div th:insert="fragments/navbar.html :: navbar"></div>
 
+    <!-- About Us Text -->
+    <h1 class="text-gradient">Who We Are</h1>
+
+    <div class="form-wrapper">
+        <section id="form-left">
+            <img src="https://images.unsplash.com/photo-1596529267076-07866e3655cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" id="top-image"alt="">
         </section>
         <div id="form-right">
-             <h1 class="" id="about-us">About Us</h1>
-            <!-- <h3 class="" id="mission-statement">We strive to always deliver the perfect cake for your perfect occasion.</h3> -->
-
+            <h1 class="" id="about-us">About Us</h1>
             <p class="description">9 cakes patisserie is a homestyle bakery run by a small team of dedicated bakers that specialises in soft and light cream cakes, suitable for all your special occasions. When baking cakes, we bake in small batches to ensure freshness and quality, and only serve what we love to eat. Just like baking for our family and friends, we bake with love. Our cakes have all been meticulously tested out and are lower in sugar, soft, fluffy and fresh, suitable for the young and old as we use all natural products without preservatives and all cakes are made fresh to order. More cake, Less guilt! Hooray!</p>
             <div class = vision-section><h2 id="vision-text"> Our Vision</h2>
-            <p class="description"> We want to provide quality and delicious cakes and desserts to everyone. All our cakes are freshly baked to order, using only the finest quality ingredients, we bake light and fluffy cakes. Creating asthetically looking cakes with delightful flavours that bring family and friends closer with every slice. All the bakes are baked fresh in small batches upon orders. We are constantly on the look out for exciting and delicious bakes, so there is always something to look forward to for everyone. We understand that there are no short cuts in life and that applies to our philosophy in baking too. Each cake & treat is baked and hand decorated with humble ingredients without any preservatives. Let us deliver sweetness in your lives. To date, we have served over 20,000 customers and have been featured on Times Magazine and the Straits Times.</p></div>
+                <p class="description"> We want to provide quality and delicious cakes and desserts to everyone. All our cakes are freshly baked to order, using only the finest quality ingredients, we bake light and fluffy cakes. Creating asthetically looking cakes with delightful flavours that bring family and friends closer with every slice. All the bakes are baked fresh in small batches upon orders. We are constantly on the look out for exciting and delicious bakes, so there is always something to look forward to for everyone. We understand that there are no short cuts in life and that applies to our philosophy in baking too. Each cake & treat is baked and hand decorated with humble ingredients without any preservatives. Let us deliver sweetness in your lives. To date, we have served over 20,000 customers and have been featured on Times Magazine and the Straits Times.</p>
+            </div>
         </div>
     </div>
-</div>
-        <!-- <div class="cut-line my-4"></div> -->
 
-        <section id="homepage-category-section">
-            <h1 class="text-gradient mb-4 our-team">Meet the Team</h1>
-            <div id="card-grid">
+    <!-- Meet the Team -->
+
+    <section id="homepage-category-section">
+        <h1 class="text-gradient mb-4 our-team">Meet the Team</h1>
+        <div id="card-grid">
             <div class="container-fluid">
-              <div class="row">
-                <div class="col-12 col-sm col-lg-3 ">
-                  <div class="card category-card mb-3">
-                    <img src="../images/audrey.png" alt="Audrey">
-                    <h2>Audrey</h2>
-                    <p class="px-2">“I love spending the weekends surrounded by my dogs, and learning to code. As a learner at Generation Singapore’s Junior Full Stack Developer Course, I enjoy seeing how our ideas come to life, and solving problems together with my team. I’m really excited to apply my knowledge to solve bigger real-world problems as I improve my skills.”</p>
-                    
-                    <!-- TOGGLE -->
-                    
-                    <!-- <p type="button"  data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                        <i class="fas fa-chevron-down"></i>
-                    </p> -->
-                    <!-- <div class="collapse" id="collapseExample"> -->
-                        <div class="profile-links">
-                          <a href="mailto:audkhoo@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-                          <a href="https://github.com/audkhoo" target="_blank"><i class="fab fa-github-square"></i></i></a>
-                          <a href="https://www.linkedin.com/in/audkhoo/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <div class="row">
+                    <div class="col-12 col-sm col-lg-3 ">
+                        <div class="card category-card mb-3">
+                            <img src="../images/audrey.png" alt="Audrey">
+                            <h2>Audrey</h2>
+                            <p class="px-2">“I love spending the weekends surrounded by my dogs, and learning to code. As a learner at Generation Singapore’s Junior Full Stack Developer Course, I enjoy seeing how our ideas come to life, and solving problems together with my team. I’m really excited to apply my knowledge to solve bigger real-world problems as I improve my skills.”</p>
+                            <div class="profile-links">
+                                <a href="mailto:audkhoo@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                                <a href="https://github.com/audkhoo" target="_blank"><i class="fab fa-github-square"></i></i></a>
+                                <a href="https://www.linkedin.com/in/audkhoo/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </div>
                         </div>
-                    <!-- </div> -->
-                </div>
-                </div>
-                
-                <div class="col-12 col-sm col-lg-3">
-                  <div class="card category-card mb-3">
-                    <img src="../images/daren.png" alt="Daren">
-                    <h2>Daren</h2>
-                    <p class="px-2">I enjoy a good book and a hot coffee on a Sunday morning. Exercising is my go-to approach for destressing. As a learner at Generation Singapore, I enjoy the thrill of building a fully functional web application.
-                      My goal is to enhance my programming skills and secure a full-time job as a developer."</p>
-                    <div class="profile-links">
-                        <a href="mailto:darenpehlong@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a href=" https://github.com/Daren-Peh" target="_blank"><i class="fab fa-github-square"></i></a>
-                        <a href="https://www.linkedin.com/in/daren-peh" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-                </div>
-               
-                    <div class="col-12 col-lg-3">
-                      <div class="card category-card mb-3">
-                        <img src="../images/jaline.png" alt="Jaline">
-                        <h2>Jaline</h2>
-                        <p class="px-2">"Ever since I was a kid, I enjoy painting and sketching as a hobby. I love coding as it is exciting. Being a learner of the JFSD program, solving problems that seems impossible to fix gives me a sense of accomplishment. I hope to continue developing my knowledge and kickstart my journey in the tech industry."</p>
-                        <div class="profile-links">
-                          <a href="mailto:jalinemay@gmail.com"><i class="fas fa-envelope"></i></a>
-                          <a href="https://github.com/jlnfoo" target="_blank"><i class="fab fa-github-square"></i></a>
-                          <a href="https://www.linkedin.com/in/jlnfoo/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        </div>
-                    </div>
                     </div>
                     <div class="col-12 col-sm col-lg-3">
-                      <div class="card category-card mb-3">
-                        <img src="../images/meiling.png" alt="Mei Ling">
-                        <h2>Mei Ling</h2>
-                        <p class="px-2">"I like being close with nature and outdoor activity, especially biking. This year, I became a Microsoft Full-stack Developer learner and I'm excited to build web pages with my team. The best part is implementing what we learnt in class on our project. My goal is do my best and keep learning to become a professional full-stack developer."</p>
-                        <div class="profile-links">
-                          <a href="mailto:rice0130@gmail.com" ><i class="fas fa-envelope"></i></a>
-                          <a href="https://github.com/rice0130" target="_blank"><i class="fab fa-github-square"></i></i></a>
-                          <a href=" https://www.linkedin.com/in/mei-ling-liu-126679218/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <div class="card category-card mb-3">
+                            <img src="../images/daren.png" alt="Daren">
+                            <h2>Daren</h2>
+                            <p class="px-2">I enjoy a good book and a hot coffee on a Sunday morning. Exercising is my go-to approach for destressing. As a learner at Generation Singapore, I enjoy the thrill of building a fully functional web application. My goal is to enhance my programming skills and secure a full-time job as a developer."</p>
+                            <div class="profile-links">
+                                <a href="mailto:darenpehlong@gmail.com"><i class="fas fa-envelope"></i></a>
+                                <a href=" https://github.com/Daren-Peh" target="_blank"><i class="fab fa-github-square"></i></a>
+                                <a href="https://www.linkedin.com/in/daren-peh" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </div>
                         </div>
                     </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="card category-card mb-3">
+                            <img src="../images/jaline.png" alt="Jaline">
+                            <h2>Jaline</h2>
+                            <p class="px-2">"Ever since I was a kid, I enjoy painting and sketching as a hobby. I love coding as it is exciting. Being a learner of the JFSD program, solving problems that seems impossible to fix gives me a sense of accomplishment. I hope to continue developing my knowledge and kickstart my journey in the tech industry."</p>
+                            <div class="profile-links">
+                                <a href="mailto:jalinemay@gmail.com"><i class="fas fa-envelope"></i></a>
+                                <a href="https://github.com/jlnfoo" target="_blank"><i class="fab fa-github-square"></i></a>
+                                <a href="https://www.linkedin.com/in/jlnfoo/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                    <div class="col-12 col-sm col-lg-3">
+                        <div class="card category-card mb-3">
+                            <img src="../images/meiling.png" alt="Mei Ling">
+                            <h2>Mei Ling</h2>
+                            <p class="px-2">"I like being close with nature and outdoor activity, especially biking. This year, I became a Microsoft Full-stack Developer learner and I'm excited to build web pages with my team. The best part is implementing what we learnt in class on our project. My goal is do my best and keep learning to become a professional full-stack developer."</p>
+                            <div class="profile-links">
+                                <a href="mailto:rice0130@gmail.com" ><i class="fas fa-envelope"></i></a>
+                                <a href="https://github.com/rice0130" target="_blank"><i class="fab fa-github-square"></i></i></a>
+                                <a href=" https://www.linkedin.com/in/mei-ling-liu-126679218/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                    </div>
-                
             </div>
-         
-          </section>
+        </div>
+    </section>
 
+    <!-- Footer Template -->
 
+    <div th:insert="fragments/footer.html :: footer"></div>
 
-            <!-- Footer Section -->
-      <div th:insert="fragments/footer.html :: footer"></div>
-
-    
+    <!-- Scripts & Styles -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
     <script src="about-script.js"></script>
-</body>
 </body>
 </html>

@@ -1,9 +1,6 @@
 * {
   font-family: 'Playfair Display';
-
 }
-
-
 
 body {
    display: flex;
@@ -15,9 +12,8 @@ body {
    background-repeat: no-repeat;
 }
 
-
 #form-title {
-font-size: 20px;
+    font-size: 20px;
 }
 
 form {
@@ -29,16 +25,16 @@ form {
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
     padding-top: 50px;
     height: 70%;
-  }
+ }
 
-  .form-content {
+.form-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px 0;
-  }
+}
 
-  input[type=text], input[type=password] {
+input[type=text], input[type=password] {
     width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -48,15 +44,13 @@ form {
     border-radius: 50px;
     text-align: center;
     font-size: 18px;
-  }
+}
 
-  ::placeholder {
+::placeholder {
     color: lightgrey;
-  }
+}
 
-
-  
-  .btn-login {
+.btn-login {
     background-color: #545454;
     color: white;
     padding: 5px 20px;
@@ -67,38 +61,34 @@ form {
     border-radius: 50px;
     font-size: 18px;
     transition: 300ms ease-in;
-
-  }
+}
   
-  .btn:hover {
+.btn:hover {
     background-color: black;
-  }
+}
 
-  #invalid-msg{
+#invalid-msg{
     color: maroon;
-  }
- 
+}
 
-  .container {
+.container {
     padding: 16px;
     margin-bottom: 200px;
-  }
+}
   
-  a {
+a {
     color: slategray;
     font-size: 16px;
     text-decoration: underline;
+}
 
-  }
-
-  a:hover {
+a:hover {
     color: black;
-  }
+}
 
-  /* Change styles for span and cancel button on extra small screens */
+/* Change styles for span and cancel button on extra small screens */
 @media (max-width: 800px) {
-
     .cancelbtn {
-      width: 100%;
+        width: 100%;
     }
-  }
+}

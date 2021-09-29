@@ -1,6 +1,6 @@
-/* HOMEPAGE SECTION */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Italianno&family=Tangerine:wght@400;700&family=Tangerine:wght@400;700&display=swap');
-#shop-link, #shop-link1  {
+
+#shop-link, #shop-link1 {
     font-family: 'Playfair Display';
     text-align: justify;
     text-align-last: center;
@@ -8,19 +8,20 @@
     margin-bottom: 22px;
     opacity: 0.8;
     color: black;
-  text-decoration: none; /* no underline */
+    text-decoration: none; /* no underline */
 }
 
 h1 {
-  font-family: 'Italianno','sans-serif';
+    font-family: 'Italianno','sans-serif';
 }
 
 p {
-  font-family: 'Playfair Display';
+    font-family: 'Playfair Display';
 }
+
 /* Carousel */
 
-.carousel-section img{
+.carousel-section img {
     cursor: pointer;
     width: 100%;
 }
@@ -53,19 +54,15 @@ p {
     flex-direction: column;
     justify-content: center;
     margin: 20px;
-    
 }
-
 
 #about-shop .about-description, h1 {
     display:flex;
     justify-content: center;
     text-align: center; 
-    width: 60%; 
-    /* align-items: center; */
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 .about-description {
@@ -83,36 +80,35 @@ p {
 }
 
 #about-shop #delivery-header {
-  display: flex;  
-  font-size: 55px;
+    display: flex;
+    font-size: 55px;
 }
 
-
-/* Testimonial  */
+/* Testimonial - Can it be removed? */
 
 #testimonial-header {
-  font-size: 55px;
+    font-size: 55px;
 }
 .testimonial-carousel .carousel-inner img {
-  height: 500px;
+    height: 500px;
 }
 
 .testimonial-carousel-text {
-  color: black;
-  top: 50%;
+    color: black;
+    top: 50%;
 }
 
-.cut-line{
-  display: block;
-  margin: auto;
-  width: 80%;
-  height: 2px;
-  border-bottom: 1px solid #D0B8AC;
+.cut-line {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 2px;
+    border-bottom: 1px solid #D0B8AC;
 }
 
 /* Shop by Category */
 #category-carousel-mobile {
-  display: none;
+    display: none;
 }
 
 #homepage-category-section {
@@ -121,14 +117,13 @@ p {
     margin: 100px 0;
 }
 
-#homepage-categories-header
-{ 
+#homepage-categories-header {
     text-transform: capitalize;
     text-align: center; 
     font-size: 55px;
 }
 
-.category-card{
+.category-card {
     border-width: 1px;
     cursor: pointer;
     border-color: #EFE5DC;
@@ -136,14 +131,13 @@ p {
     font-size: 18px;
 }
 
-.category-card:hover{
+.category-card:hover {
     color: grey;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, .2);
     transition: 300ms ease;
-
 }
 
-.category-card p{
+.category-card p {
     font-family: 'Playfair Display';
     text-align: justify;
     text-align-last: center;
@@ -152,7 +146,7 @@ p {
     opacity: 0.8;
 }
 
-.category-card h2{
+.category-card h2 {
     font-family: 'Playfair Display';
     text-align: center;
     font-size: 24px;
@@ -161,121 +155,107 @@ p {
     text-transform: capitalize;
 }
 
-
-
-
+/*Media Query*/
 @media screen and (max-width: 800px) {
 
-  hr {
-    display: none;
-  }
-
-  /* All Carousel */
-
-  .carousel-indicators li {
-    width: 7px;
-    height: 7px;
-    border-radius: 100%;
-    background-color: #5e5e5e;
-}
-
-  /* Home Carousel */
-
-  .carousel-item-desktop {
-    display: none ;
-    } 
-
-  .carousel-item-mobile {
-    display: flex;
-    height: 100%;
-    /* margin: auto; */
-  }
-
-  #homepage-carousel-banner {
-    margin-top: 85px;
-  }
-
-  #carousel-item1 {
-    content: url("../images/cake1a-mobile.png");
-  }
-
-  #carousel-item2 {
-    content: url("../images/cake3a-mobile.png");
-  }
-
-    #carousel-item3 {
-    content: url("../images/cake2a-mobile.png");
+    hr {
+        display: none;
     }
 
+    /* All Carousel */
 
-  /* About Section */
+    .carousel-indicators li {
+        width: 7px;
+        height: 7px;
+        border-radius: 100%;
+        background-color: #5e5e5e;
+    }
 
-  #about-shop {
-    display: none;
-  }
+    /* Home Carousel */
+
+    .carousel-item-desktop {
+        display: none ;
+    }
+
+    .carousel-item-mobile {
+        display: flex;
+        height: 100%;
+    }
+
+    #homepage-carousel-banner {
+        margin-top: 85px;
+    }
+
+    #carousel-item1 {
+        content: url("../images/cake1a-mobile.png");
+    }
+
+    #carousel-item2 {
+        content: url("../images/cake3a-mobile.png");
+    }
+
+    #carousel-item3 {
+        content: url("../images/cake2a-mobile.png");
+    }
+
+    /* About Section */
+
+    #about-shop {
+        display: none;
+    }
  
-  #about-shop-mobile {
-    display: block;
-    width: 85%; 
-    margin: 50px auto;
-  }
+    #about-shop-mobile {
+        display: block;
+        width: 85%;
+        margin: 50px auto;
+    }
 
+    #about-shop-mobile h1 {
+        display:flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 35px;
+        margin: auto;
+    }
 
-  #about-shop-mobile h1 {
-    display:flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center; 
-    font-size: 35px;
-    margin: auto;
+    #about-shop-mobile p {
+        font-size: 16px;
+        text-align: justify;
+        text-align-last: center;
+        font-family: 'Playfair Display';
+        margin-top: 30px;
+    }
 
-    
-}
+    /* Category Carousel */
 
-#about-shop-mobile p {
-    font-size: 16px;
-    text-align: justify;
-    text-align-last: center;
-    font-family: 'Playfair Display';
-    margin-top: 30px;
-}
-
-  /* Testimonial  */
-
-
-
-  /* Category Carousel */
-
-  #homepage-category-section {
-    display: none;
-  } 
+    #homepage-category-section {
+        display: none;
+    }
   
-  #category-carousel-mobile {
-    display: flex;
-    flex-direction: column;
-    margin: 60px 0;
-  }
+    #category-carousel-mobile {
+        display: flex;
+        flex-direction: column;
+        margin: 60px 0;
+    }
   
-  #category-mobile-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: capitalize;
-    margin: 0 auto 20px auto;
-    font-size: 35px;
-  }
+    #category-mobile-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: capitalize;
+        margin: 0 auto 20px auto;
+        font-size: 35px;
+    }
 
-
-  .carousel-caption p {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Italianno';
-    font-style: italic;
-    font-size: 35px;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-
-
-  }
+    .carousel-caption p {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Italianno';
+        font-style: italic;
+        font-size: 35px;
+        color: black;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+}

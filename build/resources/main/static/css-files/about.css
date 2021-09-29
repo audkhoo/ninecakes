@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Italianno&family=Tangerine:wght@400;700&family=Tangerine:wght@400;700&display=swap');
-body{
+
+body {
     display: flex;
     width: 100%;
     min-height: 150vh;
@@ -22,11 +23,10 @@ h2 {
     font-size:40px;
     text-align: center;
     font-family: 'Italianno';
-    
 }
- /* Top section  */
+/* Top section  */
 
-.form-wrapper{
+.form-wrapper {
     display: flex;
     box-sizing: border-box;
     justify-content: center;
@@ -34,7 +34,6 @@ h2 {
     margin-bottom: 50px;
     background-color: #f0ebe9;
 }
-
 
 #vision-text {
     font-size: 50px;
@@ -49,39 +48,36 @@ h2 {
     text-transform: capitalize;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
-#form-left, #form-right{
+#form-left, #form-right {
     display: flex;
     min-height: 60vh;
     flex-direction: column;
 }
 
-#form-left{  
+#form-left {
     width: 40%;
-    /* align-items: center; */
-    /* justify-content:flex-end; */
     margin: 70px 20px;
 }
 
 #form-left img {
- margin-left: 30px;
+    margin-left: 30px;
 }
 
 #form-right .our-journey {
-text-transform: capitalize;
+    text-transform: capitalize;
 }
 
-#form-right{
+#form-right {
     width: 50%;
     margin-right: 30px;
 }
 
 #form-right p {
     text-align: justify;
-
 }
 
 #form-right h3 {
@@ -89,31 +85,28 @@ text-transform: capitalize;
 }
 
 /* Bottom - Who we are  */
-#who-we-are{
+
+#who-we-are {
     font-size: 50px;
     overflow: hidden;
-    
 }
 
 #homepage-category-section h1 {
     margin: 40px 0;
 }
 
-#form-left img{
+#form-left img {
     width: 80%;
-    /* position: absolute; */
-    /* top: 150px;
-    left: 150px; */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.section-heading{
+.section-heading {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.heading-line{
+.heading-line {
     width: 120px;
     height: 3px;
     line-height: 1rem;
@@ -122,61 +115,46 @@ text-transform: capitalize;
     text-align: center;
 }
 
-.cut-line{
+.cut-line {
     display: block;
     width: 90%;
     height: 2px;
     border-bottom: #D0B8AC 1px solid;
 }
 
-/* .text-gradient{
-    margin: 10px 0;
-    background-image: linear-gradient(60deg,#D0B8AC, #F3D8C7, #EFE5DC);
-    background-clip: text;
-    color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-} */
-
-#mission-statement{
+#mission-statement {
     margin-top: 0px;
     position: relative;
     color: #222;
     font-size: 20px;
 }
 
-/* .capitalize{
-    text-transform: uppercase;
-} */
-
-.description{
+.description {
     opacity: 0.9;
     font-size: 20px;
     padding: 10px 0;
     text-align-last: center;
-
 }
 
-
-.cards p{
+.cards p {
     font-size: 20px;
     font-weight: bold;
     text-transform: capitalize;
 }
 
-#top h1{
+#top h1 {
     text-align: center;
 }
 
-.search-box input{
+.search-box input {
     border-color: coral;
 }
 
-.search-box:focus{
+.search-box:focus {
    outline: none ;
 }
 
-.category-card{
+.category-card {
     border-color: transparent;
     margin: auto;
     width: 90%;
@@ -188,11 +166,10 @@ text-transform: capitalize;
     margin: 50px;
 }
 
-.category-card img{
+.category-card img {
     width: 100%;
-    
 }
-.category-card h2{
+.category-card h2 {
     color: #0c2340;
     margin: 15px 0;
     text-align: center;
@@ -204,20 +181,19 @@ text-transform: capitalize;
     text-align-last: center;
     margin-bottom: 25px;   
     font-size: 18px;
-
 }
 
 i {
     cursor: pointer;
 }
 
-i:hover{
+i:hover {
     box-shadow:(2px 2px 3px rgba(0, 0, 0, 0.2));
     opacity: 0.8;
 }
 
 
-.profile-links{
+.profile-links {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -227,32 +203,29 @@ i:hover{
 .profile-links .fas, .fab {
     color: #a3a3a3;
     margin: 0 5px 15px 5px;
-    font-size: 22px;         
-
+    font-size: 22px;
 }
 
 .profile-links i:hover {
     color: black;
-
 }
 
+/* Media Query */
+@media (max-width: 800px) {
 
-@media (max-width: 800px){
-
-
-    .form-wrapper{
+    .form-wrapper {
         flex-direction: column;
         overflow-x: hidden;
         margin-bottom: 0;
     }
-    #form-left, #form-right{
+
+    #form-left, #form-right {
         width: 100%;
         justify-content: center;
         align-items: center;
         margin: 0;
         min-height: 40vh;
     }
-
 
     #form-left img {
         width: 100%;
@@ -270,7 +243,6 @@ i:hover{
         margin: 0 15px 30px 15px;
     }
 
-
     .vision-section {
         display: none;
     }
@@ -278,7 +250,8 @@ i:hover{
     #card-grid {
         margin: 0 auto;
     }
-    .category-card{
+
+    .category-card {
         align-items: center;
         justify-content: center;
         width: 100%;
@@ -287,7 +260,7 @@ i:hover{
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
 
-    .category-card img{
+    .category-card img {
         width: 100%;
     }
 
@@ -299,6 +272,4 @@ i:hover{
         font-size: 60px;
         margin: 20px 0;
     }
-
-
 }
